@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.markdown h2 {
+  @apply text-3xl font-semibold mt-4;
+}
+
+.markdown h1 {
+  @apply text-4xl font-bold mt-4;
+}
+
+.markdown ul {
+  @apply mt-10 list-inside list-decimal;
+}
+.markdown a {
+  @apply underline;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
