@@ -1,5 +1,5 @@
 import prisma from 'lib/prisma'
-import { getSession } from 'next-auth/react'
+import { auth } from '../../../auth'
 
 export default async (req, res) => {
   if (req.method !== 'POST') {
@@ -7,7 +7,7 @@ export default async (req, res) => {
     return
   }
 
-  const session = await getSession({ req })
+  const session = await auth()
   if (!session) return res.status(401).json({ message: 'Not logged in' })
   const user = await prisma.user.findUnique({
     where: {
