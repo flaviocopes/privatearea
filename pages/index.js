@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 
@@ -40,9 +41,9 @@ export default function Home() {
         <p className='mt-10'>Just $5/m</p>
 
         <div className='mt-10'>
-          <a className='bg-black text-white px-5 py-2' href='/api/auth/signin'>
+          <Link className='bg-black text-white px-5 py-2' href='/api/auth/signin'>
             Become a supporter
-          </a>
+          </Link>
         </div>
       </div>
     </div>
